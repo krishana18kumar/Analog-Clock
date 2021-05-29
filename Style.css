@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+body.light {
+  /* background: #d1dae3; */
+  background: #ade;
+}
+
+.clock {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #091921 url(clock2.png);
+  background-size: cover;
+  border: 4px solid #091921;
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.05),
+    20px 20px 20px rgba(0, 0, 0, 0.3),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.05),
+    inset 20px 20px 20px rgba(0, 0, 0, 0.3);
+
+  /* box-shadow: 0 -15px 15px rgba(241, 235, 235, 0.05),
+    inset 0 -15px 15px rgba(166, 206, 240, 0.651), 0 15px 15px rgba(8, 8, 8, 0),
+    inset 0 15px 15px rgba(86, 161, 211, 0.692); */
+}
+
+body.light .clock {
+  background: #d1dae3 url(clock2.png);
+  background-size: cover;
+  border: 4px solid #c9d0d8;
+  box-shadow: -8px -8px 15px rgba(255, 255, 255, 0.5),
+    10px 10px 10px rgba(0, 0, 0, 0.1),
+    inset -8px -8px 15px rgba(255, 255, 255, 0.5),
+    inset 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.clock:before {
+  content: "";
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+body.light .clock:before {
+  background: #4eade4;
+}
+
+.clock .hour,
+.clock .min,
+.clock .sec {
+  position: absolute;
+}
+
+.clock .hour,
+.hr {
+  width: 160px;
+  height: 160px;
+}
+.clock .min,
+.mn {
+  width: 190px;
+  height: 190px;
+}
+.clock .sec,
+.sc {
+  width: 230px;
+  height: 230px;
+}
+
+.hr,
+.mn,
+.sc {
+  display: flex;
+  justify-content: center;
+  position: absolute;
+  border-radius: 50%;
+}
+
+.hr:before {
+  content: "";
+  z-index: 5;
+  position: absolute;
+  width: 8px;
+  height: 80px;
+  background: #ff105e;
+  border-radius: 6px 6px 6px 6px;
+}
+
+.mn:before {
+  content: "";
+  z-index: 6;
+  position: absolute;
+  width: 5px;
+  height: 100px;
+  background: #dfa8ba;
+  border-radius: 6px 6px 0 0;
+}
+
+body.light .mn:before {
+  background: #091921;
+}
+
+.sc:before {
+  content: "";
+  z-index: 8;
+  position: absolute;
+  width: 3px;
+  height: 150px;
+  background: #2eb1da;
+  border-radius: 6px 6px 0 0;
+}
+
+.date,
+.day {
+  position: relative;
+  width: 140px;
+  height: 30px;
+  top: -60px;
+  padding: 5px 0px;
+  background-color: #cff;
+  text-align: center;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: monospace, "Courier New", Courier;
+  line-height: 19px;
+  letter-spacing: 2px;
+  color: black;
+  border: 2px solid #fff;
+  border-radius: 7px;
+  z-index: 0;
+}
+
+.day {
+  top: 60px;
+<<<<<<< HEAD
+=======
+  /* left: 50%; */
+>>>>>>> 4bd399b34d88c03c15a9308410f6d5f49951720a
+}
+
+body.light .date,
+.day {
+  border: 2px solid #091921;
+}
+
+.toggleClass {
+  position: absolute;
+  top: 30px;
+  right: 120px;
+  font-size: 18px;
+  color: #d1dae3;
+  font-family: consolas;
+  display: flex;
+  align-items: center;
+}
+
+.toggleClass:after {
+  position: absolute;
+  content: "Light Mode";
+  white-space: nowrap;
+}
+
+body.light .toggleClass {
+  color: #091921;
+}
+
+body.light .toggleClass:after {
+  content: "Dark Mode";
+}
+
+input[type="checkbox"] {
+  -webkit-appearance: none;
+  visibility: hidden;
+  display: none;
+}
+
+.check {
+  position: absolute;
+  display: block;
+  width: 40px;
+  height: 20px;
+  top: -8px;
+  right: 10px;
+  background: #092c3e;
+  cursor: pointer;
+  border-radius: 20px;
+  overflow: hidden;
+  transition: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check {
+  background: #fff;
+  box-shadow: 0 0 0 1600px #092c3e;
+}
+
+.check:before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #fff;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  transition: ease-in 0.5s;
+}
+
+input[type="checkbox"]:checked ~ .check:before {
+  transform: translateX(-50px);
+}
+
+.check:after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  background: #092c3e;
+  height: 16px;
+  width: 16px;
+  border-radius: 50%;
+  transition: 0.5s;
+  transform: translateX(50px);
+}
+
+input[type="checkbox"]:checked ~ .check:after {
+  transform: translateX(0px);
+}
