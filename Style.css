@@ -148,10 +148,6 @@ body.light .mn:before {
 
 .day {
   top: 60px;
-<<<<<<< HEAD
-=======
-  /* left: 50%; */
->>>>>>> 4bd399b34d88c03c15a9308410f6d5f49951720a
 }
 
 body.light .date,
@@ -206,7 +202,7 @@ input[type="checkbox"] {
 
 input[type="checkbox"]:checked ~ .check {
   background: #fff;
-  box-shadow: 0 0 0 1600px #092c3e;
+  box-shadow: 0 0 0 2000px #092c3e;
 }
 
 .check:before {
