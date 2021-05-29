@@ -1,0 +1,22 @@
+{
+  "name": "analogclock",
+  "version": "1.0.0",
+  "description": "Analog Clock using HTML CSS JS",
+  "main": "index.js",
+  "scripts": {
+    "deploy": "gh-pages -d app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krishana18kumar/Analog-Clock.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/krishana18kumar/Analog-Clock/issues"
+  },
+  "homepage": "https://github.com/krishana18kumar/Analog-Clock#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.0"
+  }
+}
